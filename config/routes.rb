@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  resources :posts
+
   scope :api do
     resources :users, except: [:create]
+    resources :suggestions
+    resources :posts
+    resources :categories
 
     post 'register', to: 'auth#register'
     post 'login', to: 'auth#login'
