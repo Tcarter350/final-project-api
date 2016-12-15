@@ -15,7 +15,7 @@ class SuggestionsController < ApplicationController
 
   # POST /suggestions
   def create
-    @suggestion = Suggestion.new(suggestion_params)
+    @suggestion = Suggestion.new(Uploader.upload(suggestion_params))
 
     if @suggestion.save
       render json: @suggestion, status: :created, location: @suggestion
@@ -46,6 +46,6 @@ class SuggestionsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def suggestion_params
-      params.permit(:post_id, :image, :link, :price)
+      params.permit(:post_id, :image, :link, :price, :base64)
     end
 end
