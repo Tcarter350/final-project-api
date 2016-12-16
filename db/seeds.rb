@@ -169,14 +169,14 @@ post16 = Post.create!({
 sug1 = Suggestion.create!({
   post_id: post1.id,
   image: File.open(File.join(Rails.root, "db/images/tumbler.jpeg")),
-  link: "https://www.etsy.com/uk/listing/219208136/industrial-pendant-light-galvanized?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=bare%20bulb%20pendant&ref=sr_gallery_20",
+  link: "http://www.johnlewis.com/john-lewis-barrel-tumbler-clear/p2919130",
   price: "2.50"
 })
 
 sug2 = Suggestion.create!({
   post_id: post1.id,
   image: File.open(File.join(Rails.root, "db/images/bulb.jpg")),
-  link: "http://www.johnlewis.com/john-lewis-barrel-tumbler-clear/p2919130",
+  link: "https://www.etsy.com/uk/listing/219208136/industrial-pendant-light-galvanized?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=bare%20bulb%20pendant&ref=sr_gallery_20",
   price: "58"
 })
 
