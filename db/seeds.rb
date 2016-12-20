@@ -42,12 +42,12 @@ pete = User.create!({
   image: File.open(File.join(Rails.root, "db/images/tobias.jpg")),
 })
 
-nancy = User.create!({
-  username: "nancyplants",
-  email: "nancy@ga.co",
+alexa = User.create!({
+  username: "alexaplants",
+  email: "alexa@ga.co",
   password: "password",
   password_confirmation: "password",
-  image: File.open(File.join(Rails.root, "db/images/nancy.jpg")),
+  image: File.open(File.join(Rails.root, "db/images/alexa.jpg")),
 })
 
 post1 = Post.create!({
@@ -115,7 +115,7 @@ post9 = Post.create!({
 })
 
 post10 = Post.create!({
-  user_id: nancy.id,
+  user_id: alexa.id,
   image: File.open(File.join(Rails.root, "db/images/cat.jpg")),
   caption: "Sundays are best spent at home. The cat decided to get involved on this one.",
   category_ids: [1,3]
@@ -151,7 +151,7 @@ post14 = Post.create!({
 })
 
 post15 = Post.create!({
-  user_id: nancy.id,
+  user_id: alexa.id,
   image: File.open(File.join(Rails.root, "db/images/faces.jpg")),
   caption: "A friend of mine made this for me!",
   category_ids: [1,3,4]
